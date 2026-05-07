@@ -190,6 +190,17 @@ export function ContactSection() {
           >
             <h3 className="text-3xl sm:text-4xl mb-8 text-white">Send Us a Message</h3>
             <div className="relative p-8 rounded-2xl border border-border/40 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10">
+              {/*
+TEMPORARILY DISABLED: Backend contact form
+
+Reason:
+- Backend API is not yet deployed
+- Prevents broken form submissions on live site
+
+TODO:
+- Re-enable form after backend is deployed
+- Set VITE_API_URL in Netlify environment variables
+
               <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <Label htmlFor="contact-name">Name</Label>
@@ -250,6 +261,23 @@ export function ContactSection() {
                     Send Message
                   </Button>
                 </form>
+                */}
+<div className="text-white space-y-4">
+  <p className="text-lg">
+    To get in touch, please email us directly:
+  </p>
+  <ul className="space-y-2">
+    <li>
+      General: <a href="mailto:hedinn@affekta.com" className="text-primary underline">hedinn@affekta.com</a>
+    </li>
+    <li>
+      Partnerships: <a href="mailto:sales@affekta.com" className="text-primary underline">sales@affekta.com</a>
+    </li>
+    <li>
+      Careers: <a href="mailto:jobs@affekta.com" className="text-primary underline">jobs@affekta.com</a>
+    </li>
+  </ul>
+</div>
             </div>
           </motion.div>
         </div>
